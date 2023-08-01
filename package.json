@@ -1,19 +1,22 @@
 {
-  "name": "@nodebug/boilerplatejs",
+  "name": "@nodebug/axios",
   "version": "1.0.0",
   "author": {
     "name": "Node Bug",
     "email": "nodebug@outlook.com"
   },
   "bugs": {
-    "url": "https://github.com/node-bug/boilerplatejs/issues"
+    "url": "https://github.com/node-bug/axios/issues"
   },
   "dependencies": {
     "@nodebug/config": "2.1.0",
-    "@nodebug/logger": "1.1.0"
+    "@nodebug/logger": "1.1.0",
+    "axios": "0.27.2",
+    "tough-cookie": "4.0.0",
+    "http-cookie-agent": "4.0.2"
   },
   "description": "boiler plate for nodejs projects",
-  "homepage": "https://github.com/node-bug/boilerplatejs#readme",
+  "homepage": "https://github.com/node-bug/axios#readme",
   "keywords": [
     "node",
     "npm",
@@ -23,7 +26,7 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-bug/boilerplatejs.git"
+    "url": "git+https://github.com/node-bug/axios.git"
   },
   "scripts": {
     "test": "npm run test"
