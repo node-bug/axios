@@ -15,7 +15,6 @@ A Node.js axios wrapper with cookie support and automatic retry logic.
 - TypeScript type definitions
 - Modern ES module support
 - Comprehensive test coverage
-- Configurable via `@nodebug/config` package
 
 ## Installation
 
@@ -62,14 +61,6 @@ const client = new Axios('https://api.example.com', true)
 
 ````
 
-### Configuration Options
-
-The Axios constructor accepts two parameters:
-1. `url` (string) - Base URL for requests
-2. `rejectUnauthorized` (boolean) - Whether to reject unauthorized TLS certificates (default: true)
-
-Additional configuration can be set through the `@nodebug/config` package when it's integrated.
-
 ## Contributing
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
@@ -107,33 +98,6 @@ const response = await client.request({
 })
 ```
 
-### Configuration
-
-This package is designed to be compatible with the `@nodebug/config` package for configuration management. While the current implementation doesn't directly use it, the package is included as a dependency to support future integration.
-
-To set up configuration:
-
-1. Install the config package (optional, for future use):
-
-```bash
-npm install @nodebug/config
-```
-
-2. Create a configuration file (e.g., `config.js` or `config.json`) in your project root:
-
-```js
-// config.js
-export default {
-  axios: {
-    baseURL: 'https://api.example.com',
-    rejectUnauthorized: true,
-    // Add other axios config options here
-  },
-}
-```
-
-3. The configuration will be automatically loaded and used by the Axios instance when integration is implemented.
-
 ## API
 
 ### `new Axios(url, rejectUnauthorized = true)`
@@ -141,7 +105,7 @@ export default {
 Creates a new axios client instance.
 
 - `url` - Base URL for all requests
-- `rejectUnauthorized` - Whether to reject unauthorized TLS certificates (default: true)
+- `rejectUnauthorized` - Whether to validate TLS certificates (default: `true`)
 
 ### Properties
 
@@ -190,4 +154,12 @@ npm run format
 
 ## License
 
-[MPL-2.0](LICENSE)
+MPL-2.0 - See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `npm test`
+5. Submit a pull request
