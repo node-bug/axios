@@ -26,6 +26,19 @@ All contributions must include tests. Please ensure that:
 - All existing tests continue to pass
 - New functionality is covered by tests
 
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage report
+npm test -- --coverage
+
+# Lint code
+npm run lint
+```
+
 ## Reporting Issues
 
 If you find a bug or have a feature request, please open an issue on the GitHub repository.
