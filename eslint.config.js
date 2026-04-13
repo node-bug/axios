@@ -34,7 +34,7 @@ export default [
       ecmaVersion: 'latest',
       globals: {
         ...globals.node,
-        ...globals.mocha,
+        ...globals.jest,
       },
     },
   },
